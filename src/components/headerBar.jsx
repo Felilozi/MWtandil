@@ -12,7 +12,7 @@ const HeaderBar = () => {
         <div className='container-fluid header sticky-top'>
             <Navbar data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand href="#home">MW-Tandil</Navbar.Brand>
+                    <Navbar.Brand href="/">MW-Tandil</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
