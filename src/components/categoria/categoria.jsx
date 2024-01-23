@@ -1,5 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import BasicExample from './card'
 
 
 
@@ -8,8 +9,8 @@ const Categoria = ({ categoria }) => {
         <>
             
             <div>
-                <h1>{categoria}</h1>
-                {/* Resto del contenido del componente */}
+                <h1 className='text-center'>{categoria}</h1>
+                <BasicExample categoria={categoria}/>
             </div>
             
         </>

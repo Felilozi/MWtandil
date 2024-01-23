@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import FooterBar from './footerBar';
 import Productos from './Galeria/productos';
 import Categoria from './categoria/categoria';
@@ -15,7 +15,9 @@ const MiRuter = () => {
         <Router>
             <HeaderBar />
             <Routes>
-                <Route path='/' element={<Home/>}/>
+                
+                <Route path='/home' element={<Home/>}/>
+                
                 {categorias.map((categoria) => (
                     <Route
 
@@ -23,6 +25,8 @@ const MiRuter = () => {
                         path={`/${categoria}`}
                         element={categoria === 'Todos' ? <Productos /> : <Categoria categoria={categoria} />}
                     />))}
+                    
+                <Route path='*' element={<Navigate to="/home" replace />}/>
             </Routes>
             <FooterBar/>
         </Router>
